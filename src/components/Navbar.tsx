@@ -13,8 +13,8 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <Vote className="h-8 w-8 text-indigo-600" />
-            <span className="text-xl font-bold text-gray-900">VoteHub</span>
+            <Vote className="h-8 w-8 text-red-800" />
+            <span className="text-xl font-bold text-red-800">People`s Choice </span>
           </Link>
 
           <div className="flex items-center space-x-4">
@@ -49,7 +49,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setShowAuthMenu(!showAuthMenu)}
-                className="flex items-center space-x-1 px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700"
+                className="flex items-center space-x-1 px-4 py-2 rounded-md bg-red-600 text-white hover:bg-red-700"
               >
                 {user ? (
                   <>
