@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { BarChart, LayoutDashboard, LogIn, LogOut, PlusCircle, User as UserIcon, Vote } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Vote, PlusCircle, LayoutDashboard, LogOut, LogIn, User as UserIcon, BarChart } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
-  const { user, isAdmin, signInAnon, signInWithGoogle, signOut, displayName } = useAuthStore();
+  const { user, isAdmin, signInAnon,  signOut, displayName } = useAuthStore();
   const [showAuthMenu, setShowAuthMenu] = useState(false);
 
   return (
@@ -94,15 +94,7 @@ export default function Navbar() {
                       </>
                     ) : (
                       <>
-                        <button
-                          onClick={() => {
-                            signInWithGoogle();
-                            setShowAuthMenu(false);
-                          }}
-                          className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          Sign in with Google
-                        </button>
+                        
                         <button
                           onClick={() => {
                             signInAnon();
