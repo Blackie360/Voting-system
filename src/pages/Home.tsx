@@ -69,7 +69,7 @@ export default function Home() {
             Celebrate excellence at Kabarak University! Nominate, vote, and support your favorite nominees.
           </p>
           <Link
-            to="/vote"
+            to="/"
             className="inline-block bg-white text-[#9D2235] px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
           >
             Start Voting
